@@ -1,5 +1,4 @@
 import requests,sys,json,os,datetime,time,importlib as lib, pandas as pd
-sys.path.insert(1,'C:/Users/DIS/PycharmProjects/AzureAutomation/AAS_CNTRL')
 import ASA_BEARER_TOKEN as abt
 
 ###################################################################################
@@ -21,11 +20,6 @@ else :
     server = 'ofdwprddaaas002'
     location = 'canadacentral'
     poll_interval = 60
-
-'''    model = 'CrawlPhaseSemanticModel'
-    server = 'owfgdevaas001'
-    location = 'westus2'
-    poll_interval = 60'''
 
 
 print("parms received:",'\nModel:',model,'\nServer:',server,'\nlocation:',location)
