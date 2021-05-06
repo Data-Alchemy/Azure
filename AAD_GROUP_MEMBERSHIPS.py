@@ -1,6 +1,7 @@
  ####################################################################################################################
-##### This script requires that you have run the AAD users script first as it is used as an input to this script #####
-##### this script uses asyncio to process the rest requests concurrently due to large size of AAD users list     #####
+##### This script requires that you have run the AAD users script first as it is used as an input to this script   #####
+##### this script uses asyncio to process the rest requests concurrently due to large size of AAD users list       #####
+##### Choose to pull the groups for each user instead of users in a group since nested groups in a group are messy #####
  ####################################################################################################################
  
  
