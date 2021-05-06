@@ -1,2 +1,3 @@
-# Azure
-AAD parallel rest api for getting all group memberships in a company
+#############################
+These scripts contain azure automation scripts to manage or extract information from azure
+Azure automation scripts 
