@@ -1,3 +1,3 @@
 #############################
-These scripts contain azure automation scripts to manage or extract information from azure
-Azure automation scripts 
+#These scripts contain azure automation scripts to manage or extract information from azure
+#Azure automation scripts 
