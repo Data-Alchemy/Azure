@@ -8,7 +8,6 @@ import requests,sys,json,os,datetime as dt ,time, pandas as pd, importlib as lib
 import asyncio
 from timeit import default_timer
 from concurrent.futures import ThreadPoolExecutor
-from GRAPH_BEARER_TOKEN import clientid,bearertoken,pickytoken
 import GRAPH_BEARER_TOKEN as abt
 ################pandas settings ##################
 pd.set_option('display.max_rows', None)
