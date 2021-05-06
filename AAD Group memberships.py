@@ -21,20 +21,22 @@ tmp= []
 START_TIME = default_timer()
 query_date_start = str(dt.datetime.now().date() - dt.timedelta(run_var+1)).replace('-',"")
 query_date_end = str(dt.datetime.now().date() - dt.timedelta(run_var)).replace('-',"")
-input_path = 'C:/ReMA_TrickleFeed_Master/Python_Export/Azure/AAD/USERS/users_'+query_date_start+'_'+query_date_end+'.parquet'
-output_path = 'C:/ReMA_TrickleFeed_Master/Python_Export/Azure/AAD/MEMBERSHIPS/members_'+query_date_start+'_'+query_date_end+'.parquet'
+input_path = 'Python_Export/Azure/AAD/USERS/users_'+query_date_start+'_'+query_date_end+'.parquet'
+output_path = 'Python_Export/Azure/AAD/MEMBERSHIPS/members_'+query_date_start+'_'+query_date_end+'.parquet'
 pyld = '{"securityEnabledOnly": "false"}'
 jsonpayload = json.loads(pyld)
 textpayload = json.dumps(jsonpayload)
-headers = {
-    'Authorization': abt.token,
-    'Content-Type': 'application/json'
-}
+
 ###################################################
 #################### functions ####################
 def fetch(session, id):
     base_url = "https://graph.microsoft.com/v1.0/users/"
     with session:
+        lib.reload(abt) ##if your process exceed bearer token expiry can cause failure this will reload bearer token on every run##
+        headers = {
+        'Authorization': abt.token,
+        'Content-Type': 'application/json'
+         }
         full_url = base_url + id + '/getMemberGroups'
         response = requests.request("POST", full_url, headers=headers, data=textpayload)
         data = response.json()
