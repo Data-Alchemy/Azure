@@ -25,7 +25,7 @@ else :
 print("parms received:",'\nModel:',model,'\nServer:',server,'\nlocation:',location)
 ############################# start refresh #######################################
 url = "https://"+location+".asazure.windows.net/servers/"+server+"/models/"+model+"/refreshes"
-pyld = '{"Type": "Full","CommitMode": "partialBatch","MaxParallelism": 10,"RetryCount": 2}'
+pyld = '{"Type": "Full","CommitMode": "partialBatch","MaxParallelism": 10,"RetryCount": 2}' # if no objects are passed a full reload of the model is done#
 
 jsonpayload = json.loads(pyld)
 textpayload = json.dumps(jsonpayload)
