@@ -28,7 +28,7 @@ if len(sys.argv)        >1:
   folders               = sys.argv[5]
   clientid              = sys.argv[6]
   clientsecret          = sys.argv[7]
-  usr                   = "dis@saveonfoods.com"
+  usr                   = ""
   pwd                   = open('C:/Users/DIS/Python_Automation/KyGen/disKys.txt').readline()
 
 
